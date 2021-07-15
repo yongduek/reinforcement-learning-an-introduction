@@ -27,6 +27,7 @@ Python replication for Sutton & Barto's book [*Reinforcement Learning: An Introd
 1. [Figure 4.1: Convergence of iterative policy evaluation on a small gridworld](https://raw.githubusercontent.com/ShangtongZhang/reinforcement-learning-an-introduction/master/images/figure_4_1.png)
 2. [Figure 4.2: Jack’s car rental problem](https://raw.githubusercontent.com/ShangtongZhang/reinforcement-learning-an-introduction/master/images/figure_4_2.png)
 3. [Figure 4.3: The solution to the gambler’s problem](https://raw.githubusercontent.com/ShangtongZhang/reinforcement-learning-an-introduction/master/images/figure_4_3.png)
+  - The family of optimial policy inside the code.
 
 ### Chapter 5
 1. [Figure 5.1: Approximate state-value functions for the blackjack policy](https://raw.githubusercontent.com/ShangtongZhang/reinforcement-learning-an-introduction/master/images/figure_5_1.png)
