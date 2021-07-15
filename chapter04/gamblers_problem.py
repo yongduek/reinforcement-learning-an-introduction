@@ -66,6 +66,7 @@ def figure_4_3():
         print(f'AT [{state}] {br} ')
 
         policy[state] = br[-1][0]    # one among equivalent actions, just triangle
+        policy[state] = br[(br.shape[0]-1)//2][0]  # the figure is interesting!!
         # policy[state] = br[0][0]    # one among equivalent actions, the same as Figure 4.3
 
         # round to resemble the figure in the book, see
