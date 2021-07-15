@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.table import Table
 
-matplotlib.use('Agg')
+# matplotlib.use('Agg')
 
 WORLD_SIZE = 4
 # left, up, right, down
@@ -93,13 +93,14 @@ def compute_state_value(in_place=True, discount=1.0):
 def figure_4_1():
     # While the author suggests using in-place iterative policy evaluation,
     # Figure 4.1 actually uses out-of-place version.
-    _, asycn_iteration = compute_state_value(in_place=True)
+    # _, asycn_iteration = compute_state_value(in_place=True)
+    # print('In-place: {} iterations'.format(asycn_iteration))
     values, sync_iteration = compute_state_value(in_place=False)
     draw_image(np.round(values, decimals=2))
-    print('In-place: {} iterations'.format(asycn_iteration))
     print('Synchronous: {} iterations'.format(sync_iteration))
 
     plt.savefig('../images/figure_4_1.png')
+    plt.pause(3)
     plt.close()
 
 

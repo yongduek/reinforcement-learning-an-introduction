@@ -13,7 +13,7 @@ import numpy as np
 import seaborn as sns
 from scipy.stats import poisson
 
-matplotlib.use('Agg')
+# matplotlib.use('Agg')
 
 # maximum # of cars in each location
 MAX_CARS = 20
@@ -140,7 +140,7 @@ def figure_4_2(constant_returned_cars=True):
         while True:
             old_value = value.copy()
             for i in range(MAX_CARS + 1):
-                for j in range(MAX_CARS + 1):
+                for j in range(MAX_CARS + 1):  # for each state S=[i, j] with action=policy[i,j]
                     new_state_value = expected_return([i, j], policy[i, j], value, constant_returned_cars)
                     value[i, j] = new_state_value
             max_value_change = abs(old_value - value).max()
@@ -176,8 +176,9 @@ def figure_4_2(constant_returned_cars=True):
         iterations += 1
 
     plt.savefig('../images/figure_4_2.png')
+    plt.pause(5)
     plt.close()
 
 
 if __name__ == '__main__':
-    figure_4_2()
+    figure_4_2(constant_returned_cars=False)  # setting for whether or not use Poisson PMF
